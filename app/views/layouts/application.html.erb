@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>XpLoIT News</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  </head>
+
+  <body>
+    <div class="bg-primary text-white text-center mb-2 p-2">
+
+      <%= link_to root_path, class: 'text-white text-decoration-none' do %>
+        <h1 class="display-7">Welcome to XNews</h1>
+      <% end %>
+
+      <p class="lead fs-6">
+        <strong>Here you can find all that you need to learn about HydraVim and get up-to-date
+          with all features and releases in first-hand
+        </strong>
+      </p>
+
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="bg-primary text-white text-center mt-5 p-4">
+      Copyright &copy XpLoITeam  <%= Date.current.year %>
+    </footer>
+  </body>
+</html>
